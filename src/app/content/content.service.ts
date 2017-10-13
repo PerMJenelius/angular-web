@@ -50,7 +50,7 @@ export class ContentService {
             "subpages": [
               {
                 "pageName": "Black Belt in Amazing",
-                "text": "From the University of Keeping it Real"
+                "text": "From the University of F***ing Keeping it Real"
               },
               {
                 "pageName": "Master of the Universe",

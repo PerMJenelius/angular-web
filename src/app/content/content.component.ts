@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { IMainpage } from "./mainpage";
 import { ContentService } from "./content.service";
 
@@ -7,93 +7,14 @@ import { ContentService } from "./content.service";
     templateUrl: './content.component.html',
     styleUrls: ['./content.component.css']
 })
-export class Content {
-    pageTitle = 'Acme Inc. Ltd.';
-    pageSubtitle = 'Product Management, Evolved';
+export class ContentComponent {
   
 	//array för bildurl:er + captions
 	//eller template per underitem?
-    mainpages: IMainpage[] = [
-      {
-        "pageName": "Products",
-        "subpages": [
-          {
-            "pageName": "Shovel",
-            "text": "A pretty neat shovel with a wooden handle made of glass."
-          },
-          {
-            "pageName": "Hammer",
-            "text": "Stop! ...hammer time"
-          },
-          {
-            "pageName": "Machine gun",
-            "text": "When you need a shipment of lead delivered at 300 rounds per minute. All of this is perfectly legal, of course."
-          },
-          {
-            "pageName": "Lathe",
-            "text": "The perfect tool for making things round... or at least cylindrical."
-          }
-        ]
-      },
-      {
-        "pageName": "Clients",
-        "subpages": [
-          {
-            "pageName": "Kjell & Co.",
-            "text": "The store for all your electronical needs."
-          },
-          {
-            "pageName": "Kalle Anka & Co.",
-            "text": "Donald is da man."
-          },
-          {
-            "pageName": "Kamratposten",
-            "text": "A good sufficient substitute for real friends."
-          }
-        ]
-      },
-      {
-        "pageName": "Diplomas",
-        "subpages": [
-          {
-            "pageName": "Degree of Amazing",
-            "text": "From the University of Keeping it Real"
-          },
-          {
-            "pageName": "Master of the Universe",
-            "text": "Unlike that asshole, Skeletor."
-          }
-        ]
-      },
-      {
-        "pageName": "News",
-        "subpages": [
-          {
-            "pageName": "September",
-            "text": "We are now only the second-to least manly website on the net."
-          },
-          {
-            "pageName": "August",
-            "text": "Now with 30% less suck."
-          },
-          {
-            "pageName": "July",
-            "text": "Some of our old stuff was found behind the radiator in accounting. I never trusted that Steve guy. Shhh..."
-          },
-          {
-            "pageName": "June",
-            "text": "We have a new website. Yay! Where is all our old stuff? Boo!"
-          }
-        ]
-      },
-    ];
+    mainpages: IMainpage[] = [];
 
     constructor(private _contentService: ContentService) {
 
-    }
-
-    ngOnInit(): void {
-		this.mainpages = this._contentService.getContent();
     }
 
     activePage: number = 0;
@@ -101,8 +22,12 @@ export class Content {
     activeHeader: string;
     activeText: string;
   
-    subpages: any[];
-  
+	subpages: any[];
+	
+	ngOnInit(): void {
+		this.mainpages = this._contentService.getContent();
+	}
+	
     // slice pipe for subpages?
     showSubpages(pageNr: number): void {
 
