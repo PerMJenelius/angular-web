@@ -1,0 +1,90 @@
+/* navigation */
+
+.mainpages {
+    text-align: center;
+    padding: 5px 0;
+    background-color: rgba(0,0,0,0.6);
+}
+
+    .mainpages>a {
+        padding: 5px 12px;
+        border-radius: 0 0 8px 8px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 16pt;
+        color: rgba(175,175,175,1);
+    }
+
+        .mainpages>a:hover {
+            cursor: pointer;
+            color: rgba(255,255,255,1);
+        }
+
+.subpages {
+    overflow-x: hidden;
+    text-align: center;
+    padding: 7px 0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+    .subpages a {
+        padding: 7px 10px 8px 10px;
+        border-radius: 0 0 8px 8px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 12pt;
+        color: rgba(175,175,175,1);
+    }
+
+        .subpages a:hover {
+            cursor: pointer;
+            color: rgba(255,255,255,1);
+        }
+    
+    .subpages .subpage {
+        max-width: 900px;
+        overflow-x: hidden;
+    }
+
+/* content window */
+
+.header {
+    position: fixed;
+    top: 210px;
+    left: 30px;
+    right: 30px;
+    height: 38px;
+    max-width: 900px;
+    padding: 2px 1rem 0 1rem;
+    margin: auto;
+    border-radius: 6px 6px 0 0;
+    background-color: rgba(255,255,255,0.8);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22pt;
+}
+
+.itemInfo {
+    position: fixed;
+    top: 250px;
+    bottom: 75px;
+    left: 30px;
+    right: 30px;
+    overflow-y: auto;
+    max-width: 900px;
+    padding: 1rem;
+    margin: auto;
+    background-color: rgba(255,255,255,0.6);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+}
+
+.bottombar {
+    position: fixed;
+    bottom: 60px;
+    left: 30px;
+    right: 30px;
+    height: 15px;
+    max-width: 900px;
+    padding: 0 1rem;
+    margin: auto;
+    border-radius: 0 0 6px 6px;
+    background-color: rgba(255,255,255,0.8);
+}
