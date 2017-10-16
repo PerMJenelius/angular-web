@@ -1,34 +1,34 @@
 import { Component, OnInit } from "@angular/core";
-import { IMainpage } from "./mainpage";
 import { ContentService } from "./content.service";
+
+import { IMainpage } from "./mainpage";
 
 @Component({
     selector: 'aw-content',
     templateUrl: './content.component.html',
     styleUrls: ['./content.component.css']
 })
-export class ContentComponent {
-  
-	//array för bildurl:er + captions
-	//eller template per underitem?
-    mainpages: IMainpage[] = [];
+export class ContentComponent implements OnInit {
+
+	//en template per underitem?
+    mainpages: IMainpage[];
+    activePage: number = 0;
+    activeItem: number = 10;
+    activeHeader: string;
+    activeText: string;
+	subpages: any[];
+    errorMessage: string;
 
     constructor(private _contentService: ContentService) {
 
     }
 
-    activePage: number = 0;
-    activeItem: number = 10;
-    activeHeader: string;
-    activeText: string;
-  
-	subpages: any[];
-	
 	ngOnInit(): void {
-		this.mainpages = this._contentService.getContent();
+        this._contentService.getContent()
+            .subscribe(mainpages => this.mainpages = mainpages,
+            error => this.errorMessage = <any>error);
 	}
 	
-    // slice pipe for subpages?
     showSubpages(pageNr: number): void {
 
         //hämta ut undersidor
