@@ -38,9 +38,12 @@ export class ContentComponent implements OnInit {
         var oldPage = document.getElementById(this.activePage.toString());
         var pageTab = document.getElementById(pageNr.toString());
         oldPage.style.setProperty('background-color', '');
+        oldPage.style.setProperty('color', '');
         pageTab.style.setProperty('background-color', 'rgba(0,0,0,0.5)');
+        pageTab.style.setProperty('color', 'rgba(240,240,240,1)');
         this.activePage = pageNr;
         this.activeItem = 10;
+        this.activeText = null;
     }
 
     showItem(itemNr: number): void {
@@ -54,7 +57,9 @@ export class ContentComponent implements OnInit {
         var oldTab = document.getElementById(this.activeItem.toString());
         var subTab = document.getElementById(itemNr.toString());
         oldTab.style.setProperty('background-color', '');
+        oldTab.style.setProperty('color', '');
         subTab.style.setProperty('background-color','rgba(0,0,0,0.33)');
+        subTab.style.setProperty('color','rgba(240,240,240,1)');
         this.activeItem = itemNr;
     }
 }

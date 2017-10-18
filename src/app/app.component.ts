@@ -8,7 +8,12 @@ import { ContentService } from './content/content.service';
 	providers: [ ContentService ]
 })
 export class AppComponent {
-	pageTitle = 'Acme Inc. Ltd.';
-	pageSubtitle = 'Product Management, Evolved';
+	pageTitle: string = 'Acme Inc. Ltd.';
+	pageSubtitle: string = 'Product Development';
+	contact = 
+		{
+			'Phone': '+46 736 69 57 20',
+			'Email': 'per@jenelius.se'
+		}
 	title = 'app';
 }

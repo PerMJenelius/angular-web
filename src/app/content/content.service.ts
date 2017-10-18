@@ -16,7 +16,7 @@ export class ContentService {
 
     getContent(): Observable<IMainpage[]> {
 		return this._http.get<IMainpage[]>(this._contentUrl)
-			.do(data => console.log('ALL: ' + JSON.stringify(data)))
+			.do(data => console.log('data load succesful'))
 			.catch(this.handleError);
 	}
 	

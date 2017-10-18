@@ -6,7 +6,6 @@
   </a>
 </div>
 <div class='subpages' *ngIf='subpages && subpages.length'>
-  <a><</a>
   <span class='subpage'>
     <a *ngFor='let subpage of subpages; let j = index'
       [attr.id]=(j+10)
@@ -14,10 +13,9 @@
       {{subpage.pageName}}
     </a>
   </span>
-  <a>></a>
 </div>
 <article *ngIf='activeText && activeText.length'>
-  <div class='header'>
+  <div class='topBar'>
       {{activeHeader}}
   </div>
   <div class='itemInfo'>

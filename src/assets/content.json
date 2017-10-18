@@ -54,6 +54,10 @@
         "pageName": "News",
         "subpages": [
             {
+                "pageName": "October",
+                "text": "This is the last month we shave our beards. Oh yeah!"
+            },
+            {
                 "pageName": "September",
                 "text": "We are now only the second-to least manly website on the net."
             },
@@ -63,7 +67,7 @@
             },
             {
                 "pageName": "July",
-                "text": "Some of our old stuff was found behind the radiator in accounting. I never trusted that Steve guy. Shhh..."
+                "text": "Some of our old stuff was found behind the radiator in accounting. I never trusted that Steve guy. He doesn't recycle."
             },
             {
                 "pageName": "June",
