@@ -1,8 +1,17 @@
 <header>
-    <h1>{{pageTitle}}</h1>
-    <h2>{{pageSubtitle}}</h2>
+    <a [routerLink]="['/home']">
+        <h1>{{pageTitle}}</h1>
+        <h2>{{pageSubtitle}}</h2>
+    </a>
 </header>
-<aw-content></aw-content>
+<div class='mainpages'>
+    <a *ngFor='let mainpage of mainpages; let i = index'
+    [attr.id]=i
+    (click)='showSubpages(i)'>
+    {{mainpage.pageName}}
+    </a>
+</div>
+<router-outlet></router-outlet>
 <footer>
     <address>
         <div>{{contact.Phone}}</div>
