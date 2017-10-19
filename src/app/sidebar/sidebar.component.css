@@ -15,22 +15,9 @@
         color: rgba(0,0,0,0);
         border-radius: 5px 5px 0 0;
     }
-}
-
-@media (max-width: 1600px) {
-    article {
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    }
-        
-    article>div#top {
-        display: none;
-    }
-}
 
     article>div#middle {
-        max-height: 200px;
+        max-height: calc(100vh - 255px);
         overflow-y: auto;
     }
 
@@ -41,24 +28,76 @@
         color: rgba(0,0,0,0);
         border-radius: 0 0 5px 5px;
     }
+}
 
-    article>div>ul {
+@media (min-width: 920px) and (max-width: 1600px) {
+    article {
+        width: 100vw;
         margin: 0;
         padding: 0;
+        }
+            
+        article>div#top {
+            display: none;
+        }
+    
+        article>div#middle {
+            width: 920px;
+            margin: auto;
+            max-height: 160px;
+            overflow-y: auto;
+        }
+    
+        article>div#bottom {
+            width: 920px;
+            margin: auto;
+            text-align: center;
+            background-color: rgba(0,0,0,0.5);
+            color: rgba(0,0,0,0);
+        }
+}
+
+@media (max-width: 920px) {
+    article {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    }
+        
+    article>div#top {
+        display: none;
     }
 
-        article>div>ul>li {
-            margin: 1px 0;
-            padding: 3px 6px;
-            list-style-type: none;
-            background-color: rgba(0,0,0,0.3);
-            font-family: 'Questrial', sans-serif;
-            font-size: 16pt;
-            color: rgba(200,200,200,1);
-        }
+    article>div#middle {
+        max-height: 160px;
+        overflow-y: auto;
+    }
 
-            article>div>ul>li:hover {
-                cursor: pointer;
-                background-color: rgba(0,0,0,0.5);
-                color: rgba(240,240,240,1);
-            }
+    article>div#bottom {
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0,0,0,0.5);
+        color: rgba(0,0,0,0);
+    }
+}
+
+article>div>ul {
+    margin: 0;
+    padding: 0;
+}
+
+    article>div>ul>li {
+        margin: 1px 0;
+        padding: 3px 6px;
+        list-style-type: none;
+        background-color: rgba(0,0,0,0.3);
+        font-family: 'Questrial', sans-serif;
+        font-size: 16pt;
+        color: rgba(200,200,200,1);
+    }
+
+        article>div>ul>li:hover {
+            cursor: pointer;
+            background-color: rgba(0,0,0,0.5);
+            color: rgba(240,240,240,1);
+        }
