@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ContentService } from '../content/content.service';
+
 @Component({
 	selector: 'app-home',
 	templateUrl: './home.component.html',
@@ -7,12 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-	header: string = 'Butts'
-	text: string = 'Butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts';
+	header: string;
+	text: string;
+	errorMessage: string;
 
-	constructor() { }
-
-	ngOnInit() {
+	constructor(private _contentService: ContentService) { }
+	
+	ngOnInit(): void {
+		this._contentService.getHomePage()
+			.subscribe(home => {
+				this.header = home.header,
+				this.text = home.text
+			},
+			error => this.errorMessage = <any>error);
 	}
-
 }

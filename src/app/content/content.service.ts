@@ -11,12 +11,17 @@ import { IMainpage } from "./mainpage";
 export class ContentService {
 
 	private _contentUrl = './assets/content.json';
+	private _homeUrl = './assets/home.json';
 
 	constructor(private _http: HttpClient) { }
 
+	getHomePage(): Observable<any> {
+		return this._http.get<any>(this._homeUrl)
+			.catch(this.handleError);
+	}
+
     getContent(): Observable<IMainpage[]> {
 		return this._http.get<IMainpage[]>(this._contentUrl)
-			.do(data => console.log('data load succesful'))
 			.catch(this.handleError);
 	}
 	

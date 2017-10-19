@@ -7,12 +7,16 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ContentComponent } from './content/content.component';
 import { HomeComponent } from './home/home.component';
+import { ReferencesComponent } from './references/references.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		ContentComponent,
-		HomeComponent
+		HomeComponent,
+		ReferencesComponent,
+		SidebarComponent
 	],
 	imports: [
 		BrowserModule,

@@ -36,6 +36,7 @@ article {
     font-family: 'Questrial', sans-serif;
     font-weight: 700;
     font-size: 22pt;
+    color: rgba(75,75,75,1);
 }
 
 #itemInfo {
@@ -47,6 +48,7 @@ article {
     background-color: rgba(255,255,255,0.6);
     font-family: 'Ubuntu', sans-serif;
     font-size: 13pt;
+    color: rgba(50,50,50,1);
 }
 
 #bottombar {
