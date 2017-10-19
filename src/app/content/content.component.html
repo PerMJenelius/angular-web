@@ -1,25 +1,9 @@
-<div class='mainpages'>
-  <a *ngFor='let mainpage of mainpages; let i = index'
-    [attr.id]=i
-    (click)='showSubpages(i)'>
-    {{mainpage.pageName}}
-  </a>
-</div>
-<div class='subpages' *ngIf='subpages && subpages.length'>
-  <span class='subpage'>
-    <a *ngFor='let subpage of subpages; let j = index'
-      [attr.id]=(j+10)
-      (click)='showItem(j+10)'>
-      {{subpage.pageName}}
-    </a>
-  </span>
-</div>
-<article *ngIf='activeText && activeText.length'>
+<article *ngIf='contentText && contentText.length'>
   <div class='topBar'>
-      {{activeHeader}}
+      {{contentHeader}}
   </div>
   <div class='itemInfo'>
-    {{activeText}}
+    {{contentText}}
   </div>
   <div class='bottombar'></div>
 </article>

@@ -1,6 +1,6 @@
 header {
     text-align: center;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.7);
 }
 
     header>a {
@@ -33,7 +33,7 @@ header {
     font-family: 'Questrial', sans-serif;
     text-align: center;
     padding: 5px 0;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.5);
 }
 
     .mainpages>a {
