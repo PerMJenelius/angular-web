@@ -19,37 +19,14 @@
             color: rgba(240,240,240,1);
         }
 
-.subpages {
-    text-align: center;
-    padding: 7px 0 8px 0;
-    font-family: 'Questrial', sans-serif;
-    background-color: rgba(0,0,0,0.4);
-}
-
-    .subpages a {
-        padding: 7px 10px 8px 10px;
-        border-radius: 0 0 8px 8px;
-        font-size: 12pt;
-        color: rgba(175,175,175,1);
-    }
-
-        .subpages a:hover {
-            cursor: pointer;
-            color: rgba(240,240,240,1);
-        }
-    
-    .subpages .subpage {
-        max-width: 900px;
-        overflow-x: hidden;
-    }
-
 /* content window */
 
+article {
+    width: calc(100vw - 60px);
+    padding: 35px 30px;
+}
+
 #topBar {
-    position: fixed;
-    top: 150px;
-    left: 30px;
-    right: 30px;
     height: 35px;
     max-width: 900px;
     padding: 5px 10px 0 10px;
@@ -62,10 +39,6 @@
 }
 
 #itemInfo {
-    position: fixed;
-    top: 190px;
-    left: 30px;
-    right: 30px;
     max-height: calc(100vh - 290px);
     overflow-y: auto;
     max-width: 900px;
@@ -77,9 +50,6 @@
 }
 
 #bottombar {
-    position: fixed;
-    left: 30px;
-    right: 30px;
     height: 15px;
     max-width: 900px;
     padding: 0 10px;
