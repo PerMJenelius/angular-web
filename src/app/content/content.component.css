@@ -45,7 +45,7 @@
 
 /* content window */
 
-.topBar {
+#topBar {
     position: fixed;
     top: 150px;
     left: 30px;
@@ -61,12 +61,12 @@
     font-size: 22pt;
 }
 
-.itemInfo {
+#itemInfo {
     position: fixed;
     top: 190px;
-    /* bottom: 89px; */
     left: 30px;
     right: 30px;
+    max-height: calc(100vh - 290px);
     overflow-y: auto;
     max-width: 900px;
     padding: 8px 10px;
@@ -76,9 +76,8 @@
     font-size: 13pt;
 }
 
-.bottombar {
+#bottombar {
     position: fixed;
-    bottom: 74px;
     left: 30px;
     right: 30px;
     height: 15px;

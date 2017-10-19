@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
 	header: string = 'Butts'
-	text: string = 'Butts butts butts';
+	text: string = 'Butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts butts butts Butts butts butts Butts butts butts';
 
 	constructor() { }
 

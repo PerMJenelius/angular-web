@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, Input, OnInit, AfterViewInit } from "@angular/core";
 import { ContentService } from "./content.service";
 
 import { IMainpage } from "./mainpage";
@@ -8,12 +8,20 @@ import { IMainpage } from "./mainpage";
     templateUrl: './content.component.html',
     styleUrls: ['./content.component.css']
 })
-export class ContentComponent implements OnInit {
+export class ContentComponent implements AfterViewInit {
 
     @Input() contentHeader: string;
     @Input() contentText: string;
 
-	ngOnInit(): void {
-        
+    contentHeight: number = 0;
+
+	ngAfterViewInit(): void {
+        var itemInfo = document.getElementById('itemInfo');
+        var bottomBar = document.getElementById('bottombar');
+
+        var itemHeight = itemInfo.getBoundingClientRect().height;
+        var top = itemHeight + 190;
+
+        bottomBar.setAttribute("style", "top:" + top + "px");
     }
 }
