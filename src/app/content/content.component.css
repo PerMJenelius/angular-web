@@ -47,7 +47,7 @@
 
 .topBar {
     position: fixed;
-    top: 180px;
+    top: 150px;
     left: 30px;
     right: 30px;
     height: 35px;
@@ -63,8 +63,8 @@
 
 .itemInfo {
     position: fixed;
-    top: 220px;
-    bottom: 80px;
+    top: 190px;
+    /* bottom: 89px; */
     left: 30px;
     right: 30px;
     overflow-y: auto;
@@ -78,7 +78,7 @@
 
 .bottombar {
     position: fixed;
-    bottom: 65px;
+    bottom: 74px;
     left: 30px;
     right: 30px;
     height: 15px;

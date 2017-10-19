@@ -13,5 +13,7 @@ export class ContentComponent implements OnInit {
     @Input() contentHeader: string;
     @Input() contentText: string;
 
-	ngOnInit(): void { }
+	ngOnInit(): void {
+        
+    }
 }
