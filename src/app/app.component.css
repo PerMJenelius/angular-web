@@ -6,11 +6,11 @@ header {
 
     header>a {
         text-decoration: none;
-        color: rgba(230,230,230,1);
+        color: rgba(200,200,200,1);
     }
 
         header>a:hover {
-            color: rgba(255,255,255,1);
+            color: rgba(240,240,240,1);
         }
 
         header>a>h1 {
@@ -48,6 +48,7 @@ header {
         .mainpages>a:hover {
             cursor: pointer;
             color: rgba(240,240,240,1);
+            background-color: rgba(0,0,0,0.4);
         }
         
 footer {

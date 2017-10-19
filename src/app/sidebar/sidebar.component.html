@@ -1,3 +1,9 @@
-<p>
-  sidebar works!
-</p>
+<article *ngIf='menuItems && menuItems.length'>
+	<div id='top'>...</div>
+	<div id='middle'>
+		<ul *ngFor='let item of menuItems'>
+			<li>{{item}}</li>
+		</ul>
+	</div>
+	<div id='bottom'>...</div>
+</article>
