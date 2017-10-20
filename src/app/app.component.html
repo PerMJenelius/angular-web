@@ -1,9 +1,10 @@
 <header>
-    <a [routerLink]="['/home']">
-        <h1>{{pageTitle}}</h1>
-        <h2>{{pageSubtitle}}</h2>
-    </a>
+    <h1><a [routerLink]="['/home']">{{pageTitle}}</a></h1>
+    <h2><a [routerLink]="['/home']">{{pageSubtitle}}</a></h2>
+    <a class='lang' id='english'>English</a>
+    <a class='lang' id='svenska'>Svenska</a>
 </header>
+
 <div class='mainpages'>
     <a *ngFor='let mainpage of mainpages; let i = index'
     [attr.id]=i
@@ -11,7 +12,9 @@
     {{mainpage.pageName}}
     </a>
 </div>
+
 <router-outlet></router-outlet>
+
 <footer>
     <address>
         <div>{{contact.Phone}}</div>

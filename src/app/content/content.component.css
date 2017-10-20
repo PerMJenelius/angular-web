@@ -1,25 +1,25 @@
-@media (min-width: 1600px) {
+@media (min-width: 1567px) {
     #itemInfo {
         max-height: calc(100vh - 290px);
         overflow-y: auto;
         max-width: 900px;
         padding: 8px 10px;
         margin: auto;
-        background-color: rgba(0,0,0,0.3);
+        background-color: rgba(0,0,0,0.5);
         font-family: 'Ubuntu', sans-serif;
         font-size: 13pt;
         color: rgba(200,200,200,1);
     }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1566px) {
     #itemInfo {
-        max-height: calc(100vh - 460px);
+        max-height: calc(100vh - 441px);
         overflow-y: auto;
         max-width: 900px;
         padding: 8px 10px;
         margin: auto;
-        background-color: rgba(0,0,0,0.3);
+        background-color: rgba(0,0,0,0.5);
         font-family: 'Ubuntu', sans-serif;
         font-size: 13pt;
         color: rgba(200,200,200,1);
@@ -37,7 +37,7 @@ article {
     padding: 5px 10px 0 10px;
     margin: auto;
     border-radius: 5px 5px 0 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
     font-family: 'Questrial', sans-serif;
     font-weight: 700;
     font-size: 22pt;
@@ -50,5 +50,5 @@ article {
     padding: 0 10px;
     margin: auto;
     border-radius: 0 0 5px 5px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
 }
