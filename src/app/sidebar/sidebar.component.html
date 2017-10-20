@@ -1,8 +1,8 @@
-<article *ngIf='menuItems && menuItems.length'>
+<article *ngIf='content && content.length'>
 	<div id='top'>...</div>
 	<div id='middle'>
-		<ul *ngFor='let item of menuItems'>
-			<li>{{item}}</li>
+		<ul *ngFor='let item of content'>
+			<li>{{item.title}}</li>
 		</ul>
 	</div>
 	<div id='bottom'>...</div>

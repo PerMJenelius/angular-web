@@ -11,4 +11,5 @@ import { IMainpage } from "./mainpage";
 export class ContentComponent {
     @Input() contentHeader: string;
     @Input() contentText: string;
+    @Input() content: any[];
 }

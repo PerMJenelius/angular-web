@@ -16,38 +16,49 @@ header {
             color: rgba(200,200,200,1);
         }
 
+        header>h1>a:hover {
+            color: rgba(230,230,230,1);
+        }
+
     header>h2 {
         margin: 0;
         padding: 4px 0 0 0;
         font-family: 'Questrial', sans-serif;
         font-weight: 500;
         font-size: 12pt;
+        color: rgba(200,200,200,1);
     }
 
-        header>h2>a {
-            text-decoration: none;
-            color: rgba(200,200,200,1);
+        header>h2:hover {
+            cursor: default;
         }
     
     header .lang {
+        text-align: left;
         position: fixed;
-        width: 58px;
+        width: 70px;
         border-radius: 20px 0 00 20px;
-        padding: 2px 8px;
-        background-color: rgba(0,0,0,1);
-        color: rgba(175,175,175,1);
+        padding: 3px 10px;
+        background-color: rgba(255,255,255,0.15);
         font-family: 'Questrial', sans-serif;
         font-size: 12pt;
     }
 
+        .lang:hover {
+            cursor: pointer;
+            color: rgba(230,230,230,1) !important;
+        }
+
         header .lang#english {
-            top: 15px;
+            top: 13px;
             right: 0;
+            color: rgba(230,230,230,1);
         }
 
         header .lang#svenska {
-            top: 42px;
+            top: 43px;
             right: 0;
+            color: rgba(175,175,175,1);
         }
 
 .mainpages {
@@ -63,6 +74,7 @@ header {
         border-radius: 0 0 8px 8px;
         font-size: 16pt;
         color: rgba(175,175,175,1);
+        text-decoration: none;
     }
 
         .mainpages>a:hover {

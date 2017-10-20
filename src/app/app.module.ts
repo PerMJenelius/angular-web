@@ -23,6 +23,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 		FormsModule,
 		HttpClientModule,
 		RouterModule.forRoot([
+			{ path: 'references', component: ReferencesComponent },
 			{ path: 'home', component: HomeComponent },
 			{ path: '', redirectTo: 'home', pathMatch: 'full' },
 			{ path: '**', redirectTo: 'home', pathMatch: 'full' }

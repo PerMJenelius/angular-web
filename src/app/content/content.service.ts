@@ -19,11 +19,6 @@ export class ContentService {
 		return this._http.get<any>(this._homeUrl)
 			.catch(this.handleError);
 	}
-
-    getContent(): Observable<IMainpage[]> {
-		return this._http.get<IMainpage[]>(this._contentUrl)
-			.catch(this.handleError);
-	}
 	
 	private handleError(err: HttpErrorResponse) {
 		console.log(err.message);
