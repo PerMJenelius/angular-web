@@ -62,7 +62,12 @@ export class AppComponent {
 		newTab.setAttribute('style', 'background-color: rgba(0,0,0,0.4); color: rgba(240,240,240,1)');
 		
 		this.loadContent(newLink);
-		
+
 		this.oldLink = newLink;
+	}
+
+	onItemClick(id: string) {
+		// alert(this.content[id].title);
+		this.header = this.content[id].title;
 	}
 }

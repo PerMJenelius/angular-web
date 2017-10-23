@@ -20,13 +20,15 @@
 	<div id='top'>...</div>
 	<div id='middle'>
 		<ul *ngFor='let item of content'>
-			<li>{{item.title}}</li>
+            <li (click)='onItemClick(item.id)'>
+                    {{item.title}}
+            </li>
 		</ul>
 	</div>
 	<div id='bottom'>...</div>
 </aside>
 
-<article *ngIf='text && text.length && header && header.length'>
+<article *ngIf='header && header.length'>
 	<div id='topBar'>
 		{{header}}
 	</div>
