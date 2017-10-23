@@ -6,9 +6,10 @@ import { IMainpage } from './content/mainpage';
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.css']
+	styleUrls: ['./app.component.css'],
+	providers: [ ContentService ]
 })
-export class AppComponent implements OnChanges {
+export class AppComponent {
 	pageTitle: string = 'Acme Inc. Ltd.';
 	pageSubtitle: string = 'Product Development';
 	contact = 
@@ -17,21 +18,32 @@ export class AppComponent implements OnChanges {
 			'Email': 'per@jenelius.se'
 		}
 	
-	activeLink: string = '0';
+	header: string;
+	text: string;
+	content: any[];
 
-	ngOnChanges(): void {
-		
+	errorMessage: string;
+
+	constructor(private _contentService: ContentService) { }
+	
+	ngOnInit(): void {
+		this._contentService.getHomePage()
+			.subscribe(home => {
+				this.header = home.header,
+				this.text = home.text
+			},
+			error => this.errorMessage = <any>error);
 	}
 
-	clickedLink(id: string): void {
-		var newLink = document.getElementById(id);
-		newLink.setAttribute('style', 'background-color: rgba(0,0,0,0.4); color: rgba(240,240,240,1)');
+	oldLink: string = '0';
 
-		if( this.activeLink !== '0') {
-			var oldLink = document.getElementById(this.activeLink);
-			oldLink.setAttribute('style', 'background-color: default; color: default');
+	onLinkClick(newLink: string): void {
+		if( this.oldLink !== '0') {
+			var oldTab = document.getElementById(this.oldLink);
+			oldTab.setAttribute('style', 'background-color: default; color: default');
 		}
-
-		this.activeLink = id;
+		var newTab = document.getElementById(newLink);
+		newTab.setAttribute('style', 'background-color: rgba(0,0,0,0.4); color: rgba(240,240,240,1)');
+		this.oldLink = newLink;
 	}
 }

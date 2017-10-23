@@ -1,6 +1,6 @@
 <header>
     <h1>
-        <a [routerLink]="['/home']">
+        <a>
             {{pageTitle}}
         </a>
     </h1>
@@ -10,18 +10,17 @@
 </header>
 
 <div class='mainpages'>
-    <a class='pageLink' id='1'
-        [routerLink]="['/references']">
-        Products
-    </a>
-    <a class='pageLink' id='2'>
-        Clients
-    </a>
-    <a>Diplomas</a>
-    <a>News</a>
+    <a id='1' (click)='onLinkClick("1")'>Products</a>
+    <a id='2' (click)='onLinkClick("2")'>Clients</a>
+    <a id='3' (click)='onLinkClick("3")'>Diplomas</a>
+    <a id='4' (click)='onLinkClick("4")'>News</a>
 </div>
 
-<router-outlet></router-outlet>
+<aw-content
+    [contentHeader]='header'
+    [contentText]='text'
+    [content]='content'>
+</aw-content>
 
 <footer>
     <address>
