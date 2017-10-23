@@ -10,13 +10,10 @@ import { IMainpage } from "./mainpage";
 @Injectable()
 export class ContentService {
 
-	private _contentUrl = './assets/content.json';
-	private _homeUrl = './assets/home.json';
-
 	constructor(private _http: HttpClient) { }
 
-	getHomePage(): Observable<any> {
-		return this._http.get<any>(this._homeUrl)
+	getContent(contentUrl: string): Observable<any> {
+		return this._http.get<any>(contentUrl)
 			.catch(this.handleError);
 	}
 	

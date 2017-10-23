@@ -5,13 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ContentComponent } from './content/content.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		ContentComponent,
-		SidebarComponent
+		ContentComponent
 	],
 	imports: [
 		BrowserModule,

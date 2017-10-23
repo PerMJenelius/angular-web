@@ -1,6 +1,6 @@
 <header>
     <h1>
-        <a>
+        <a id='0' (click)='onLinkClick("0")'>
             {{pageTitle}}
         </a>
     </h1>
@@ -16,11 +16,25 @@
     <a id='4' (click)='onLinkClick("4")'>News</a>
 </div>
 
-<aw-content
-    [contentHeader]='header'
-    [contentText]='text'
-    [content]='content'>
-</aw-content>
+<aside *ngIf='content && content.length'>
+	<div id='top'>...</div>
+	<div id='middle'>
+		<ul *ngFor='let item of content'>
+			<li>{{item.title}}</li>
+		</ul>
+	</div>
+	<div id='bottom'>...</div>
+</aside>
+
+<article *ngIf='text && text.length && header && header.length'>
+	<div id='topBar'>
+		{{header}}
+	</div>
+	<div id='itemInfo'>
+		{{text}}
+	</div>
+	<div id='bottombar'></div>
+</article>
 
 <footer>
     <address>

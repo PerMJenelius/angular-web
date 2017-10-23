@@ -1,0 +1,19 @@
+{
+    "header": "Products",
+    "text": "A few words about the products.",
+    "content": [
+        {
+            "title": "Garnet doll",
+            "templateUrl": "./assets/projects.html"
+        },
+        {
+            "title": "Amethyst doll",
+            "templateUrl": "./assets/projects.html"
+        },
+        {
+            "title": "Pearl doll",
+            "templateUrl": "./assets/projects.html"
+        }
+    ]
+    
+}

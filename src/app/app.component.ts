@@ -27,12 +27,28 @@ export class AppComponent {
 	constructor(private _contentService: ContentService) { }
 	
 	ngOnInit(): void {
-		this._contentService.getHomePage()
-			.subscribe(home => {
-				this.header = home.header,
-				this.text = home.text
-			},
-			error => this.errorMessage = <any>error);
+		this.loadContent('0');
+	}
+
+	contentUrl: string = './assets/home.json';
+
+	loadContent(pageId: string): void {
+
+		switch (pageId) {
+			case '0': this.contentUrl = './assets/home.json'; break;
+			case '1': this.contentUrl = './assets/projects.json'; break;
+			case '2': this.contentUrl = './assets/references.json'; break;
+			case '3': this.contentUrl = './assets/certificates.json'; break;
+			case '4': this.contentUrl = './assets/news.json'; break;
+		}
+	
+		this._contentService.getContent(this.contentUrl)
+		.subscribe(content => {
+			this.header = content.header,
+			this.text = content.text,
+			this.content = content.content
+		},
+		error => this.errorMessage = <any>error);
 	}
 
 	oldLink: string = '0';
@@ -44,6 +60,9 @@ export class AppComponent {
 		}
 		var newTab = document.getElementById(newLink);
 		newTab.setAttribute('style', 'background-color: rgba(0,0,0,0.4); color: rgba(240,240,240,1)');
+		
+		this.loadContent(newLink);
+		
 		this.oldLink = newLink;
 	}
 }
