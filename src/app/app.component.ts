@@ -25,7 +25,7 @@ export class AppComponent {
 	}
 
 	content: any[];
-	contentId: string = 'x';
+	contentId: string;
 	contentTitle: string;
 	contentText: string;
 	templateUrl: string;
@@ -43,11 +43,11 @@ export class AppComponent {
 		}
 	
 		this._contentService.getContent(this.contentUrl)
-		.subscribe(content => 
-			{this.content = content,
-			this.contentTitle = content[0].title,
-			this.contentText = content[0].text,
-			this.templateUrl = content[0].templateUrl},
+		.subscribe(content => {
+				this.content = content,
+				this.contentTitle = this.content[0].title,
+				this.contentText = this.content[0].text,
+				this.templateUrl = this.content[0].templateUrl},
 			error => this.errorMessage = <any>error);
 	}
 
@@ -64,26 +64,28 @@ export class AppComponent {
 				var newTab = document.getElementById(newLink);
 				newTab.setAttribute('style', 'background-color: rgba(0,0,0,0.4); color: rgba(240,240,240,1)');
 			}
+
 			this.loadContent(newLink);
+
 			this.oldLink = newLink;
+			this.oldId = '0';
 		}
 	}
 
-	oldId: string = '1';
+	oldId: string = '0';
 
 	onItemClick(newId: string) {
-		if(newId !== this.oldId) {
-			this.contentTitle = this.content[+newId].title;
-			this.contentText = this.content[+newId].text;
-			this.templateUrl = this.content[+newId].templateUrl;
 
-			var oldLine = document.getElementById(this.oldId);
-			oldLine.setAttribute('style', 'background-color: default; color: default');
+		this.contentTitle = this.content[+newId].title;
+		this.contentText = this.content[+newId].text;
+		this.templateUrl = this.content[+newId].templateUrl;
 
-			var newLine = document.getElementById(newId);
-			newLine.setAttribute('style', 'background-color: rgba(0,0,0,0.7); color: rgba(240,240,240,1)');
+		var oldLine = document.getElementById(this.oldId);
+		oldLine.setAttribute('style', 'background-color: default; color: default');
 
-			this.oldId = newId;
-		}
+		var newLine = document.getElementById(newId);
+		newLine.setAttribute('style', 'background-color: rgba(0,0,0,0.7); color: rgba(240,240,240,1)');
+
+		this.oldId = newId;
 	}
 }
