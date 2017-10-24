@@ -1,5 +1,8 @@
-{
-    "header": "Welcome",
-    "text": "A few words about the company and what to expect from this webpage.",
-    "templateUrl": "./assets/home.html"
-}
+[
+    {
+        "id": "0",
+        "title": "Welcome",
+        "text": "This is the website for Acme Inc Ltd., the most bestest at words.",
+        "templateUrl": "./assets/projects.html"
+    }
+]

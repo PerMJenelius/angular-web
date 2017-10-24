@@ -1,0 +1,14 @@
+[
+    {
+        "id": "0",
+        "title": "Master of the Universe",
+        "text": "Yes. We run the Unverse.",
+        "templateUrl": "./assets/projects.html"
+    },
+    {
+        "id": "1",
+        "title": "PhD i Philosophy",
+        "text": "Almost as powerful as the one above.",
+        "templateUrl": "./assets/projects.html"
+    }
+]

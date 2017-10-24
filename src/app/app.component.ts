@@ -12,62 +12,78 @@ import { IMainpage } from './content/mainpage';
 export class AppComponent {
 	pageTitle: string = 'Acme Inc. Ltd.';
 	pageSubtitle: string = 'Product Development';
-	contact = 
-		{
-			'Phone': '+46 736 69 57 20',
-			'Email': 'per@jenelius.se'
-		}
-	
-	header: string;
-	text: string;
-	content: any[];
 
-	errorMessage: string;
+	contact = {
+		'Phone': '+46 736 69 57 20',
+		'Email': 'per@jenelius.se'
+	}
 
 	constructor(private _contentService: ContentService) { }
 	
 	ngOnInit(): void {
-		this.loadContent('0');
+		this.loadContent('x');
 	}
 
+	content: any[];
+	contentId: string = 'x';
+	contentTitle: string;
+	contentText: string;
+	templateUrl: string;
+	errorMessage: string;
 	contentUrl: string = './assets/home.json';
 
 	loadContent(pageId: string): void {
 
 		switch (pageId) {
-			case '0': this.contentUrl = './assets/home.json'; break;
-			case '1': this.contentUrl = './assets/projects.json'; break;
-			case '2': this.contentUrl = './assets/references.json'; break;
-			case '3': this.contentUrl = './assets/certificates.json'; break;
-			case '4': this.contentUrl = './assets/news.json'; break;
+			case 'x': this.contentUrl = './assets/home.json'; break;
+			case 'a': this.contentUrl = './assets/projects.json'; break;
+			case 'b': this.contentUrl = './assets/references.json'; break;
+			case 'c': this.contentUrl = './assets/certificates.json'; break;
+			case 'd': this.contentUrl = './assets/news.json'; break;
 		}
 	
 		this._contentService.getContent(this.contentUrl)
-		.subscribe(content => {
-			this.header = content.header,
-			this.text = content.text,
-			this.content = content.content
-		},
-		error => this.errorMessage = <any>error);
+		.subscribe(content => 
+			{this.content = content,
+			this.contentTitle = content[0].title,
+			this.contentText = content[0].text,
+			this.templateUrl = content[0].templateUrl},
+			error => this.errorMessage = <any>error);
 	}
 
-	oldLink: string = '0';
+	oldLink: string = 'x';
 
 	onLinkClick(newLink: string): void {
-		if( this.oldLink !== '0') {
-			var oldTab = document.getElementById(this.oldLink);
-			oldTab.setAttribute('style', 'background-color: default; color: default');
-		}
-		var newTab = document.getElementById(newLink);
-		newTab.setAttribute('style', 'background-color: rgba(0,0,0,0.4); color: rgba(240,240,240,1)');
-		
-		this.loadContent(newLink);
 
-		this.oldLink = newLink;
+		if(newLink !== this.oldLink) {
+			if (this.oldLink !== 'x') {
+				var oldTab = document.getElementById(this.oldLink);
+				oldTab.setAttribute('style', 'background-color: default; color: default');
+			}
+			if (newLink !== 'x') {
+				var newTab = document.getElementById(newLink);
+				newTab.setAttribute('style', 'background-color: rgba(0,0,0,0.4); color: rgba(240,240,240,1)');
+			}
+			this.loadContent(newLink);
+			this.oldLink = newLink;
+		}
 	}
 
-	onItemClick(id: string) {
-		// alert(this.content[id].title);
-		this.header = this.content[id].title;
+	oldId: string = '1';
+
+	onItemClick(newId: string) {
+		if(newId !== this.oldId) {
+			this.contentTitle = this.content[+newId].title;
+			this.contentText = this.content[+newId].text;
+			this.templateUrl = this.content[+newId].templateUrl;
+
+			var oldLine = document.getElementById(this.oldId);
+			oldLine.setAttribute('style', 'background-color: default; color: default');
+
+			var newLine = document.getElementById(newId);
+			newLine.setAttribute('style', 'background-color: rgba(0,0,0,0.7); color: rgba(240,240,240,1)');
+
+			this.oldId = newId;
+		}
 	}
 }

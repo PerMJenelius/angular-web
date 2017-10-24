@@ -1,0 +1,38 @@
+[
+    {
+        "id": "0",
+        "title": "October 24th, 2017",
+        "text": "Seems like we worked most of the details out. We still need to figure put how to load in custom templates, though. For subpages that contain more than text.",
+        "templateUrl": "./assets/projects.html"
+    },
+    {
+        "id": "1",
+        "title": "October 23rd, 2017",
+        "text": "The website is up, but it still has some problems. Some big problems.",
+        "templateUrl": "./assets/projects.html"
+    },
+    {
+        "id": "2",
+        "title": "October 20th, 2017",
+        "text": "Back at it. Looks like we figured out routing to a degree.",
+        "templateUrl": "./assets/projects.html"
+    },
+    {
+        "id": "3",
+        "title": "October 19th, 2017",
+        "text": "How about placing each subpage into its own template? That would allow us more freedom of design.",
+        "templateUrl": "./assets/projects.html"
+    },
+    {
+        "id": "4",
+        "title": "October 18th, 2017",
+        "text": "Seems like nesting components are the future. How deep can we go?",
+        "templateUrl": "./assets/projects.html"
+    },
+    {
+        "id": "5",
+        "title": "October 17th, 2017",
+        "text": "Hmm, seems like we can either run code in the (click) function or do custom routing, but not both.",
+        "templateUrl": "./assets/projects.html"
+    }
+]

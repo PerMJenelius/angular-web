@@ -1,20 +1,21 @@
-{
-    "content": [
-        {
-            "id": "0",
-            "title": "Garnet doll",
-            "templateUrl": "./assets/projects.html"
-        },
-        {
-            "id": "1",
-            "title": "Amethyst doll",
-            "templateUrl": "./assets/projects.html"
-        },
-        {
-            "id": "2",
-            "title": "Pearl doll",
-            "templateUrl": "./assets/projects.html"
-        }
-    ]
+[
+    {
+        "id": "0",
+        "title": "Garnet doll",
+        "text": "A nice doll depicting the leader of the Gems",
+        "templateUrl": "./assets/projects.html"
+    },
+    {
+        "id": "1",
+        "title": "Amethyst doll",
+        "text": "A nice doll depicting the coolest of the Gems",
+        "templateUrl": "./assets/projects.html"
+    },
+    {
+        "id": "2",
+        "title": "Pearl doll",
+        "text": "A nice doll depicting the kindest of the Gems",
+        "templateUrl": "./assets/projects.html"
+    }
+]
     
-}

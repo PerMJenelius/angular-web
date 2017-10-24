@@ -1,0 +1,26 @@
+[
+    {
+        "id": "0",
+        "title": "Folksam",
+        "text": "Most of their furniture comes from our factory.",
+        "templateUrl": "./assets/projects.html"
+    },
+    {
+        "id": "1",
+        "title": "Coop",
+        "text": "We supply their avocadoes.",
+        "templateUrl": "./assets/projects.html"
+    },
+    {
+        "id": "2",
+        "title": "Circle-K",
+        "text": "Guess where they get their hot dogs?",
+        "templateUrl": "./assets/projects.html"
+    },
+    {
+        "id": "3",
+        "title": "IKEA",
+        "text": "The basically just resell our stuff.",
+        "templateUrl": "./assets/projects.html"
+    }
+]

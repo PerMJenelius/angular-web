@@ -1,6 +1,6 @@
 <header>
     <h1>
-        <a id='0' (click)='onLinkClick("0")'>
+        <a id='x' (click)='onLinkClick("x")'>
             {{pageTitle}}
         </a>
     </h1>
@@ -10,17 +10,17 @@
 </header>
 
 <div class='mainpages'>
-    <a id='1' (click)='onLinkClick("1")'>Products</a>
-    <a id='2' (click)='onLinkClick("2")'>Clients</a>
-    <a id='3' (click)='onLinkClick("3")'>Diplomas</a>
-    <a id='4' (click)='onLinkClick("4")'>News</a>
+    <a id='a' (click)='onLinkClick("a")'>Products</a>
+    <a id='b' (click)='onLinkClick("b")'>Clients</a>
+    <a id='c' (click)='onLinkClick("c")'>Diplomas</a>
+    <a id='d' (click)='onLinkClick("d")'>News</a>
 </div>
 
-<aside *ngIf='content && content.length'>
+<aside *ngIf='content && content.length > 1'>
 	<div id='top'>...</div>
 	<div id='middle'>
 		<ul *ngFor='let item of content'>
-            <li (click)='onItemClick(item.id)'>
+            <li id={{item.id}} (click)='onItemClick(item.id)'>
                     {{item.title}}
             </li>
 		</ul>
@@ -28,12 +28,12 @@
 	<div id='bottom'>...</div>
 </aside>
 
-<article *ngIf='header && header.length'>
+<article *ngIf='contentTitle && contentTitle.length'>
 	<div id='topBar'>
-		{{header}}
+		{{contentTitle}}
 	</div>
-	<div id='itemInfo'>
-		{{text}}
+	<div id='itemInfo' *ngIf='contentText && contentText.length'>
+		{{contentText}}
 	</div>
 	<div id='bottombar'></div>
 </article>
