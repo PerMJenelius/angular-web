@@ -2,7 +2,7 @@
     {
         "id": "0",
         "title": "Folksam",
-        "text": "Most of their furniture comes from our factory.",
+        "text": "Most of their stationary comes from our factory.",
         "templateUrl": "./assets/projects.html"
     },
     {
@@ -14,7 +14,7 @@
     {
         "id": "2",
         "title": "Circle-K",
-        "text": "Guess where they get their hot dogs?",
+        "text": "Guess where they get their diesel?",
         "templateUrl": "./assets/projects.html"
     },
     {

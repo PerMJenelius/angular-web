@@ -9,14 +9,9 @@ import { IMainpage } from "./mainpage";
     styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-    @Input() contentHeader: string;
-    @Input() contentText: string;
-    @Input() contentID: string;
-    @Input() content: any[];
+    @Input() template: string;
 
-    @Output() contentChanged: EventEmitter<string> = new EventEmitter<string>();
-
-    ngOnInit(): void {
-        this.contentChanged.emit(this.contentID);
+    ngOnInit(): void { 
+        
     }
 }

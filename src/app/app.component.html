@@ -32,9 +32,12 @@
 	<div id='topBar'>
 		{{contentTitle}}
 	</div>
-	<div id='itemInfo' *ngIf='contentText && contentText.length'>
-		{{contentText}}
-	</div>
+	<div class='itemInfo' *ngIf='contentText && contentText.length'>
+        {{contentText}}
+    </div>
+    <div class='itemInfo' *ngIf='templateUrl && templateUrl.length'>
+        <aw-content></aw-content>
+    </div>
 	<div id='bottombar'></div>
 </article>
 

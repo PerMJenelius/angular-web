@@ -198,7 +198,7 @@ aside>div>ul {
 /* Content */
 
 @media (min-width: 1567px) {
-    #itemInfo {
+    .itemInfo {
         max-height: calc(100vh - 290px);
         overflow-y: auto;
         max-width: 900px;
@@ -212,7 +212,7 @@ aside>div>ul {
 }
 
 @media (max-width: 1566px) {
-    #itemInfo {
+    .itemInfo {
         max-height: calc(100vh - 441px);
         overflow-y: auto;
         max-width: 900px;
